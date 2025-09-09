@@ -1,0 +1,6 @@
+name: PrefixSystem
+version: '1.0'
+main: de.coinsapi.prefixSystem.PrefixSystem
+api-version: '1.21'
+authors: [ coinsapi ]
+description: Prefix System, that works with LuckPerms

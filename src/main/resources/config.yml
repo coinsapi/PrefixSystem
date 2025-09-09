@@ -1,0 +1,18 @@
+# PrefixSystem Configuration
+# Supports both MiniMessage and Legacy formatting (&7, &c, etc.)
+# Placeholders: %prefix%, %playername%, %message%
+
+formats:
+  # Chat format - appears when players send messages
+  chat: "%prefix% &8| &7%playername% &8-> &7%message%"
+
+  # Tab format - appears in the player list (TAB)
+  tab: "%prefix% &8| &7%playername%"
+
+# Examples with MiniMessage:
+# chat: "<gradient:red:blue>%prefix%</gradient> <gray>| <white>%playername% <gray>-> <white>%message%"
+# tab: "<gradient:red:blue>%prefix%</gradient> <gray>| <white>%playername%"
+
+# Examples with Legacy:
+# chat: "&c%prefix% &8| &f%playername% &8-> &f%message%"
+# tab: "&c%prefix% &8| &f%playername%"
