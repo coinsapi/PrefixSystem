@@ -50,12 +50,20 @@ class PrefixSystem : JavaPlugin() {
 
     fun parseMessage(message: String): Component {
         val miniMessage = MiniMessage.miniMessage()
-        val legacy = LegacyComponentSerializer.legacyAmpersand()
+        val legacy = LegacyComponentSerializer.builder()
+            .hexColors()
+            .character('&')
+            .extractUrls()
+            .build()
 
         return try {
             miniMessage.deserialize(message)
         } catch (e: Exception) {
-            legacy.deserialize(message)
+            try {
+                legacy.deserialize(message)
+            } catch (e2: Exception) {
+                Component.text(message)
+            }
         }
     }
 }
